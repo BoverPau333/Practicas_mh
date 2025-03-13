@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/main.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/main.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/main.cpp"
+},
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/brutesearch.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/brutesearch.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/brutesearch.cpp"
+},
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/greedy.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/greedy.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/greedy.cpp"
+},
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/pincrem.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/pincrem.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/pincrem.cpp"
+},
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/randomsearch.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/randomsearch.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/randomsearch.cpp"
+}
+]

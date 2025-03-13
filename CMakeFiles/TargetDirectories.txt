@@ -1,0 +1,3 @@
+/home/paubover/Escritorio/2dCuatri/Practicas_mh/CMakeFiles/main.dir
+/home/paubover/Escritorio/2dCuatri/Practicas_mh/CMakeFiles/edit_cache.dir
+/home/paubover/Escritorio/2dCuatri/Practicas_mh/CMakeFiles/rebuild_cache.dir
