@@ -1,0 +1,75 @@
+\hypertarget{namespaceeffolkronium}{}\doxysection{effolkronium Namespace Reference}
+\label{namespaceeffolkronium}\index{effolkronium@{effolkronium}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceeffolkronium_1_1details}{details}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1seeder__default}{seeder\+\_\+default}}
+\begin{DoxyCompactList}\small\item\em Default seeder for \textquotesingle{}random\textquotesingle{} classes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{basic\+\_\+random\+\_\+static}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with static API and static internal member storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__thread__local}{basic\+\_\+random\+\_\+thread\+\_\+local}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with thread\+\_\+local API and thread\+\_\+local internal member storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__local}{basic\+\_\+random\+\_\+local}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with local API and local internal member storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a11cbd79a2c1538db38f15cd8565d8cca}{random\+\_\+static}} = \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{basic\+\_\+random\+\_\+static}}$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a143677cd9b2127a0897d1f80ffbbc95f}{random\+\_\+thread\+\_\+local}} = \mbox{\hyperlink{classeffolkronium_1_1basic__random__thread__local}{basic\+\_\+random\+\_\+thread\+\_\+local}}$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a18c0a6191ad71f370cff7a40bd0ee305}{random\+\_\+local}} = \mbox{\hyperlink{classeffolkronium_1_1basic__random__local}{basic\+\_\+random\+\_\+local}}$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceeffolkronium_a18c0a6191ad71f370cff7a40bd0ee305}\label{namespaceeffolkronium_a18c0a6191ad71f370cff7a40bd0ee305}} 
+\index{effolkronium@{effolkronium}!random\_local@{random\_local}}
+\index{random\_local@{random\_local}!effolkronium@{effolkronium}}
+\doxysubsubsection{\texorpdfstring{random\_local}{random\_local}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceeffolkronium_a18c0a6191ad71f370cff7a40bd0ee305}{effolkronium\+::random\+\_\+local}} = typedef \mbox{\hyperlink{classeffolkronium_1_1basic__random__local}{basic\+\_\+random\+\_\+local}}$<$std\+::mt19937$>$}
+
+
+
+The basic static random alias based on a std\+::mt19937. 
+
+\begin{DoxyNote}{Note}
+It uses non static methods API and data with auto storage 
+
+Not thread safe. Should construct on the stack at local scope 
+\end{DoxyNote}
+\mbox{\Hypertarget{namespaceeffolkronium_a11cbd79a2c1538db38f15cd8565d8cca}\label{namespaceeffolkronium_a11cbd79a2c1538db38f15cd8565d8cca}} 
+\index{effolkronium@{effolkronium}!random\_static@{random\_static}}
+\index{random\_static@{random\_static}!effolkronium@{effolkronium}}
+\doxysubsubsection{\texorpdfstring{random\_static}{random\_static}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceeffolkronium_a11cbd79a2c1538db38f15cd8565d8cca}{effolkronium\+::random\+\_\+static}} = typedef \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{basic\+\_\+random\+\_\+static}}$<$std\+::mt19937$>$}
+
+
+
+The basic static random alias based on a std\+::mt19937. 
+
+\begin{DoxyNote}{Note}
+It uses static methods API and data with static storage 
+
+Not thread safe but more prefomance 
+\end{DoxyNote}
+\mbox{\Hypertarget{namespaceeffolkronium_a143677cd9b2127a0897d1f80ffbbc95f}\label{namespaceeffolkronium_a143677cd9b2127a0897d1f80ffbbc95f}} 
+\index{effolkronium@{effolkronium}!random\_thread\_local@{random\_thread\_local}}
+\index{random\_thread\_local@{random\_thread\_local}!effolkronium@{effolkronium}}
+\doxysubsubsection{\texorpdfstring{random\_thread\_local}{random\_thread\_local}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceeffolkronium_a143677cd9b2127a0897d1f80ffbbc95f}{effolkronium\+::random\+\_\+thread\+\_\+local}} = typedef \mbox{\hyperlink{classeffolkronium_1_1basic__random__thread__local}{basic\+\_\+random\+\_\+thread\+\_\+local}}$<$std\+::mt19937$>$}
+
+
+
+The basic static random alias based on a std\+::mt19937. 
+
+\begin{DoxyNote}{Note}
+It uses static methods API and data with thread\+\_\+local storage 
+
+Thread safe but less performance 
+\end{DoxyNote}

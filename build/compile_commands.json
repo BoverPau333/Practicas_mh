@@ -21,6 +21,11 @@
 },
 {
   "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
+  "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/psnimp.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/psnimp.cpp",
+  "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/psnimp.cpp"
+},
+{
+  "directory": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/build",
   "command": "/usr/bin/g++  -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/common -I/home/paubover/Escritorio/2dCuatri/Practicas_mh/inc -g -o CMakeFiles/main.dir/src/randomsearch.cpp.o -c /home/paubover/Escritorio/2dCuatri/Practicas_mh/src/randomsearch.cpp",
   "file": "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/randomsearch.cpp"
 }

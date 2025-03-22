@@ -1,5 +1,6 @@
 #include <cassert>
 #include <randomsearch.h>
+#include <iostream>
 
 using namespace std;
 
@@ -14,17 +15,16 @@ using namespace std;
 ResultMH RandomSearch::optimize(Problem *problem, int maxevals) {
   assert(maxevals > 0);
   tSolution best;
-  float best_fitness = -1;
+  double best_fitness = -1;
 
   for (int i = 0; i < maxevals; i++) {
     tSolution solution = problem->createSolution();
-    float fitness = problem->fitness(solution);
+    double fitness = problem->fitness(solution);
 
-    if (fitness < best_fitness || best_fitness < 0) {
+    if (fitness > best_fitness || best_fitness < 0) {
       best = solution;
       best_fitness = fitness;
     }
   }
-
   return ResultMH(best, best_fitness, maxevals);
 }

@@ -1,0 +1,866 @@
+\hypertarget{classeffolkronium_1_1basic__random__static}{}\doxysection{effolkronium\+::basic\+\_\+random\+\_\+static$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$ Class Template Reference}
+\label{classeffolkronium_1_1basic__random__static}\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+
+
+Base template class for random with static API and static internal member storage.  
+
+
+
+
+{\ttfamily \#include $<$random.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa02aeed3121850972f5d2e5c51f92219}{engine\+\_\+type}} = Engine
+\begin{DoxyCompactList}\small\item\em Type of used random number engine. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa21ab20da546a509e9aba1afeca712d7}{seeder\+\_\+type}} = Seeder
+\begin{DoxyCompactList}\small\item\em Type of used random number seeder. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad44f3be225050a57c267a01531ba3965}{integer\+\_\+dist\+\_\+t}} = Integer\+Dist$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Type of used integer distribution. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad6022a6a5a66cc5244130541d440ea6a}{real\+\_\+dist\+\_\+t}} = Real\+Dist$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Type of used real distribution. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ae4fcd1837dfb96c6e05441c59dd364e5}{bool\+\_\+dist\+\_\+t}} = Bool\+Dist
+\begin{DoxyCompactList}\small\item\em Type of used bool distribution. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} = \mbox{\hyperlink{structeffolkronium_1_1details_1_1common}{details\+::common}}
+\begin{DoxyCompactList}\small\item\em Key type for getting common type numbers or objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad033eaeb1b29a731dab933782f2e4ca2}{basic\+\_\+random\+\_\+static}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}} ()
+\item 
+static constexpr Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}} ()
+\item 
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a2de6451b6bff703a6425fe07107609c4}{discard}} (const unsigned long long z)
+\begin{DoxyCompactList}\small\item\em Advances the internal state by z times. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a998aa3e3282eab1082ed2c22373efe37}{reseed}} ()
+\begin{DoxyCompactList}\small\item\em Reseed by Seeder. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a40670aaaa27fff71fdc24dbc13a130d0}{seed}} (const typename Engine\+::result\+\_\+type value=Engine\+::default\+\_\+seed)
+\begin{DoxyCompactList}\small\item\em Reinitializes the internal state of the random-\/number engine using new seed value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Sseq $>$ }\\static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a61bb0f1ff7cc99d84f206296ba7dac68}{seed}} (Sseq \&seq)
+\begin{DoxyCompactList}\small\item\em Reinitializes the internal state of the random-\/number engine using new seed value. \end{DoxyCompactList}\item 
+static Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a7e9574f341db38f496141f6a05837e69}{get}} ()
+\begin{DoxyCompactList}\small\item\em return random number from engine in \mbox{[}\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min()}}, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max()}}\mbox{]} range \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a633f45cae3663ee2cc7980c7881fb253}{is\+\_\+equal}} (const Engine \&other)
+\begin{DoxyCompactList}\small\item\em Compares internal pseudo-\/random number engine with \textquotesingle{}other\textquotesingle{} pseudo-\/random number engine. Two engines are equal, if their internal states are equivalent, that is, if they would generate equivalent values for any number of calls of operator() \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename CharT , typename Traits $>$ }\\static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a92e7c1f016fffa55b9d6ac2cefe5c4b9}{serialize}} (std\+::basic\+\_\+ostream$<$ CharT, Traits $>$ \&ost)
+\begin{DoxyCompactList}\small\item\em Serializes the internal state of the internal pseudo-\/random number engine as a sequence of decimal numbers separated by one or more spaces, and inserts it to the stream ost. The fill character and the formatting flags of the stream are ignored and unaffected. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename CharT , typename Traits $>$ }\\static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa3475f147f762e748984f2fb2f3fd577}{deserialize}} (std\+::basic\+\_\+istream$<$ CharT, Traits $>$ \&ist)
+\begin{DoxyCompactList}\small\item\em Restores the internal state of the internal pseudo-\/random number engine from the serialized representation, which was created by an earlier call to \textquotesingle{}serialize\textquotesingle{} using a stream with the same imbued locale and the same CharT and Traits. If the input cannot be deserialized, internal engine is left unchanged and failbit is raised on ist. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__int}{details\+::is\+\_\+uniform\+\_\+int}}$<$ T $>$\+::value, T $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_af6e5bc27705ce45b06aca2b403d9ec18}{get}} (T from=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}(), T to=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}())
+\begin{DoxyCompactList}\small\item\em Generate a random integer number in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+int\+\_\+distribution. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__real}{details\+::is\+\_\+uniform\+\_\+real}}$<$ T $>$\+::value, T $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a73fb98bbb19bc22b0f69212cb84c4c92}{get}} (T from=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}(), T to=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}())
+\begin{DoxyCompactList}\small\item\em Generate a random real number in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+real\+\_\+distribution. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__byte}{details\+::is\+\_\+byte}}$<$ T $>$\+::value, T $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ab2907c4d4e4de3a1d22a3d9b1877b56e}{get}} (T from=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}(), T to=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}())
+\begin{DoxyCompactList}\small\item\em Generate a random byte number in a \mbox{[}from; to\mbox{]} range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} $>$\+::value \&\&\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__number}{details\+::is\+\_\+supported\+\_\+number}}$<$ A $>$\+::value \&\&\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__number}{details\+::is\+\_\+supported\+\_\+number}}$<$ B $>$\+::value \&\&std\+::is\+\_\+signed$<$ A $>$\+::value !=std\+::is\+\_\+unsigned$<$ B $>$\+::value, C $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ab65c935834b12dd30ffa4b663bf44d7a}{get}} (A from=std\+::numeric\+\_\+limits$<$ A $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}(), B to=std\+::numeric\+\_\+limits$<$ B $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}())
+\begin{DoxyCompactList}\small\item\em Generate a random common\+\_\+type number in a \mbox{[}from; to\mbox{]} range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__character}{details\+::is\+\_\+supported\+\_\+character}}$<$ T $>$\+::value, T $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad01ca80363a71dc8c13e1551ef466f82}{get}} (T from=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}(), T to=std\+::numeric\+\_\+limits$<$ T $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}())
+\begin{DoxyCompactList}\small\item\em Generate a random character in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+int\+\_\+distribution. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, bool $>$\+::value, bool $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa9487045f99bd54b529079e90b9c61ad}{get}} (const double probability=0.\+5)
+\begin{DoxyCompactList}\small\item\em Generate a bool value with specific probability by std\+::bernoulli\+\_\+distribution. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a6810cb4d47112878804af9b70501a0fa}{get}} (std\+::initializer\+\_\+list$<$ T $>$ init\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Return random value from initilizer\+\_\+list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Input\+It $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__iterator}{details\+::is\+\_\+iterator}}$<$ Input\+It $>$\+::value, Input\+It $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac43f425640c6c79f0990442a5373cf8a}{get}} (Input\+It first, Input\+It last)
+\begin{DoxyCompactList}\small\item\em Return random iterator from iterator range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\static auto \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a272220135588843c1d0b88aca583ccae}{get}} (Container \&container) -\/$>$ typename std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__iterator}{details\+::is\+\_\+iterator}}$<$ decltype(std\+::begin(container))$>$\+::value, decltype(std\+::begin(container))$>$\+::type
+\begin{DoxyCompactList}\small\item\em Return random iterator from Container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Container, typename A $>$ }\\static std\+::enable\+\_\+if$<$ \mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$ Container$<$ A $>$ $>$\+::value, Container$<$ A $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a08d0160586f297bf2296fb77b19a23f3}{get}} (A from, A to, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Return container filled with random values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Container, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} $>$\+::value \&\&\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$ Container$<$ A $>$ $>$\+::value, Container$<$ C $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa455118d2c885fff850472c0e2a969bf}{get}} (A start, B end, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Return container filled with random common\+\_\+type values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Container, typename A $>$ }\\static std\+::enable\+\_\+if$<$!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$ Container$<$ A $>$ $>$\+::value, Container$<$ A $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a33030fd1cf4cf20874171d3065081f28}{get}} (A start, A end, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Return container filled with random values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Container, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} $>$\+::value \&\&!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$ Container$<$ C $>$ $>$\+::value, Container$<$ C $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a702f5d6d8cbbbfde1a6369f65d321150}{get}} (A start, B end, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Return container filled with random common\+\_\+type values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename AA, std\+::size\+\_\+t NN, typename... $>$ class Container, std\+::size\+\_\+t N, typename A $>$ }\\static std\+::enable\+\_\+if$<$!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__insert}{details\+::has\+\_\+insert}}$<$ Container$<$ A, N $>$ $>$\+::value, Container$<$ A, N $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_af699d5fd39ec107bbaa1f5fdff8b64ca}{get}} (A start, A end)
+\begin{DoxyCompactList}\small\item\em Return array-\/like container filled with random values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename AA, std\+::size\+\_\+t NN, typename... $>$ class Container, std\+::size\+\_\+t N, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} $>$\+::value \&\&!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__insert}{details\+::has\+\_\+insert}}$<$ Container$<$ C, N $>$ $>$\+::value, Container$<$ C, N $>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a30b43eeb5a352ac4407d46c9cccdd16d}{get}} (A start, B end)
+\begin{DoxyCompactList}\small\item\em Return array-\/like container filled with random common\+\_\+type values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t N$>$ }\\static T $\ast$ \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aab2cb3e7404dbd35dd9736d824c79e23}{get}} (T(\&array)\mbox{[}N\mbox{]})
+\begin{DoxyCompactList}\small\item\em Return random pointer from built-\/in array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Dist , typename... Args$>$ }\\static Dist\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa7aa5674e65242f717bb5678bb74be3d}{get}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Return value from custom Dist distribution seeded by internal random engine. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Dist $>$ }\\static Dist\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a6e3cbdb7f39a22ac0da4db84c0bd797c}{get}} (Dist \&dist)
+\begin{DoxyCompactList}\small\item\em Return value from custom \textquotesingle{}dist\textquotesingle{} distribution seeded by internal random engine. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Random\+It $>$ }\\static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a9c18d14b91553d22e69e0ef02e5a18f0}{shuffle}} (Random\+It first, Random\+It last)
+\begin{DoxyCompactList}\small\item\em Reorders the elements in the given range \mbox{[}first, last) such that each possible permutation of those elements has equal probability of appearance. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a8f9a8f667b3296df4aedfbafc76d417c}{shuffle}} (Container \&container)
+\begin{DoxyCompactList}\small\item\em Reorders the elements in the given container such that each possible permutation of those elements has equal probability of appearance. \end{DoxyCompactList}\item 
+static Engine \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac7628e8a598be72e148736c1d887e290}{get\+\_\+engine}} ()
+\begin{DoxyCompactList}\small\item\em return internal engine by copy \end{DoxyCompactList}\item 
+static Engine \& \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a69ded5639654e72f2be6394679afbf70}{engine}} ()
+\begin{DoxyCompactList}\small\item\em return internal engine by ref \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Engine \& \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a4e467640f2e7820b677d1cf69ec3ddb0}{engine\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em get reference to the static engine instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Engine, typename Seeder = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist = std\+::bernoulli\+\_\+distribution$>$\newline
+class effolkronium\+::basic\+\_\+random\+\_\+static$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$}
+
+Base template class for random with static API and static internal member storage. 
+
+\begin{DoxyNote}{Note}
+it is NOT thread safe but more efficient then \mbox{\hyperlink{classeffolkronium_1_1basic__random__thread__local}{basic\+\_\+random\+\_\+thread\+\_\+local}} 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Engine} & A random engine with interface like in the std\+::mt19937 \\
+\hline
+{\em Seeder} & A seeder type which return seed for internal engine through operator() \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ae4fcd1837dfb96c6e05441c59dd364e5}\label{classeffolkronium_1_1basic__random__static_ae4fcd1837dfb96c6e05441c59dd364e5}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!bool\_dist\_t@{bool\_dist\_t}}
+\index{bool\_dist\_t@{bool\_dist\_t}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{bool\_dist\_t}{bool\_dist\_t}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ae4fcd1837dfb96c6e05441c59dd364e5}{bool\+\_\+dist\+\_\+t}} =  Bool\+Dist}
+
+
+
+Type of used bool distribution. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}\label{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!common@{common}}
+\index{common@{common}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{common}{common}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}} =  \mbox{\hyperlink{structeffolkronium_1_1details_1_1common}{details\+::common}}}
+
+
+
+Key type for getting common type numbers or objects. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa02aeed3121850972f5d2e5c51f92219}\label{classeffolkronium_1_1basic__random__static_aa02aeed3121850972f5d2e5c51f92219}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!engine\_type@{engine\_type}}
+\index{engine\_type@{engine\_type}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{engine\_type}{engine\_type}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa02aeed3121850972f5d2e5c51f92219}{engine\+\_\+type}} =  Engine}
+
+
+
+Type of used random number engine. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ad44f3be225050a57c267a01531ba3965}\label{classeffolkronium_1_1basic__random__static_ad44f3be225050a57c267a01531ba3965}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!integer\_dist\_t@{integer\_dist\_t}}
+\index{integer\_dist\_t@{integer\_dist\_t}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{integer\_dist\_t}{integer\_dist\_t}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad44f3be225050a57c267a01531ba3965}{integer\+\_\+dist\+\_\+t}} =  Integer\+Dist$<$T$>$}
+
+
+
+Type of used integer distribution. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ad6022a6a5a66cc5244130541d440ea6a}\label{classeffolkronium_1_1basic__random__static_ad6022a6a5a66cc5244130541d440ea6a}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!real\_dist\_t@{real\_dist\_t}}
+\index{real\_dist\_t@{real\_dist\_t}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{real\_dist\_t}{real\_dist\_t}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ad6022a6a5a66cc5244130541d440ea6a}{real\+\_\+dist\+\_\+t}} =  Real\+Dist$<$T$>$}
+
+
+
+Type of used real distribution. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa21ab20da546a509e9aba1afeca712d7}\label{classeffolkronium_1_1basic__random__static_aa21ab20da546a509e9aba1afeca712d7}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!seeder\_type@{seeder\_type}}
+\index{seeder\_type@{seeder\_type}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{seeder\_type}{seeder\_type}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+using \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aa21ab20da546a509e9aba1afeca712d7}{seeder\+\_\+type}} =  Seeder}
+
+
+
+Type of used random number seeder. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ad033eaeb1b29a731dab933782f2e4ca2}\label{classeffolkronium_1_1basic__random__static_ad033eaeb1b29a731dab933782f2e4ca2}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!basic\_random\_static@{basic\_random\_static}}
+\index{basic\_random\_static@{basic\_random\_static}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{basic\_random\_static()}{basic\_random\_static()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+\mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::\mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{basic\+\_\+random\+\_\+static}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa3475f147f762e748984f2fb2f3fd577}\label{classeffolkronium_1_1basic__random__static_aa3475f147f762e748984f2fb2f3fd577}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename CharT , typename Traits $>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::deserialize (\begin{DoxyParamCaption}\item[{std\+::basic\+\_\+istream$<$ CharT, Traits $>$ \&}]{ist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Restores the internal state of the internal pseudo-\/random number engine from the serialized representation, which was created by an earlier call to \textquotesingle{}serialize\textquotesingle{} using a stream with the same imbued locale and the same CharT and Traits. If the input cannot be deserialized, internal engine is left unchanged and failbit is raised on ist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ost} & The input stream to extract the data from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a2de6451b6bff703a6425fe07107609c4}\label{classeffolkronium_1_1basic__random__static_a2de6451b6bff703a6425fe07107609c4}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!discard@{discard}}
+\index{discard@{discard}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{discard()}{discard()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::discard (\begin{DoxyParamCaption}\item[{const unsigned long long}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Advances the internal state by z times. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a69ded5639654e72f2be6394679afbf70}\label{classeffolkronium_1_1basic__random__static_a69ded5639654e72f2be6394679afbf70}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!engine@{engine}}
+\index{engine@{engine}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{engine()}{engine()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static Engine\& \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+return internal engine by ref 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a4e467640f2e7820b677d1cf69ec3ddb0}\label{classeffolkronium_1_1basic__random__static_a4e467640f2e7820b677d1cf69ec3ddb0}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!engine\_instance@{engine\_instance}}
+\index{engine\_instance@{engine\_instance}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{engine\_instance()}{engine\_instance()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static Engine\& \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::engine\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+get reference to the static engine instance 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a7e9574f341db38f496141f6a05837e69}\label{classeffolkronium_1_1basic__random__static_a7e9574f341db38f496141f6a05837e69}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+return random number from engine in \mbox{[}\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min()}}, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max()}}\mbox{]} range 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a08d0160586f297bf2296fb77b19a23f3}\label{classeffolkronium_1_1basic__random__static_a08d0160586f297bf2296fb77b19a23f3}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename... $>$ class Container, typename A $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$Container$<$A$>$ $>$\+::value, Container$<$A$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{from,  }\item[{A}]{to,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return container filled with random values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em size} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Container \char`\"{}reserve\char`\"{} method will be called before generation 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ab65c935834b12dd30ffa4b663bf44d7a}\label{classeffolkronium_1_1basic__random__static_ab65c935834b12dd30ffa4b663bf44d7a}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ \\
+static std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}}$>$\+::value \&\& \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__number}{details\+::is\+\_\+supported\+\_\+number}}$<$A$>$\+::value \&\& \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__number}{details\+::is\+\_\+supported\+\_\+number}}$<$B$>$\+::value \&\& std\+::is\+\_\+signed$<$A$>$\+::value != std\+::is\+\_\+unsigned$<$B$>$\+::value, C$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{from = {\ttfamily std\+:\+:numeric\+\_\+limits$<$A$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}()},  }\item[{B}]{to = {\ttfamily std\+:\+:numeric\+\_\+limits$<$B$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a random common\+\_\+type number in a \mbox{[}from; to\mbox{]} range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The Key type for this version of \textquotesingle{}get\textquotesingle{} method Type should be \textquotesingle{}(THIS\+\_\+\+TYPE)\+::common\textquotesingle{} struct \\
+\hline
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random common\+\_\+type number in a \mbox{[}from; to\mbox{]} range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allow both\+: \textquotesingle{}from\textquotesingle{} $<$= \textquotesingle{}to\textquotesingle{} and \textquotesingle{}from\textquotesingle{} $>$= \textquotesingle{}to\textquotesingle{} 
+
+Allow implicit type conversion 
+
+Prevent implicit type conversion from singed to unsigned types Why? std\+::common\+\_\+type$<$\+Unsigned, Signed$>$ chooses unsigned value, then Signed value will be converted to Unsigned value which gives us a wrong range for random values. \href{https://stackoverflow.com/a/5416498/5734836}{\texttt{ https\+://stackoverflow.\+com/a/5416498/5734836}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_af699d5fd39ec107bbaa1f5fdff8b64ca}\label{classeffolkronium_1_1basic__random__static_af699d5fd39ec107bbaa1f5fdff8b64ca}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename AA, std\+::size\+\_\+t NN, typename... $>$ class Container, std\+::size\+\_\+t N, typename A $>$ \\
+static std\+::enable\+\_\+if$<$!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__insert}{details\+::has\+\_\+insert}}$<$Container$<$A, N$>$ $>$\+::value, Container$<$A, N$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{start,  }\item[{A}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return array-\/like container filled with random values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em N} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a33030fd1cf4cf20874171d3065081f28}\label{classeffolkronium_1_1basic__random__static_a33030fd1cf4cf20874171d3065081f28}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename... $>$ class Container, typename A $>$ \\
+static std\+::enable\+\_\+if$<$!\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$Container$<$A$>$ $>$\+::value, Container$<$A$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{start,  }\item[{A}]{end,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return container filled with random values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em size} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a30b43eeb5a352ac4407d46c9cccdd16d}\label{classeffolkronium_1_1basic__random__static_a30b43eeb5a352ac4407d46c9cccdd16d}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename AA, std\+::size\+\_\+t NN, typename... $>$ class Container, std\+::size\+\_\+t N, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}}$>$\+::value \&\& !\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__insert}{details\+::has\+\_\+insert}}$<$Container$<$C, N$>$ $>$\+::value, Container$<$C, N$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{start,  }\item[{B}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return array-\/like container filled with random common\+\_\+type values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The Key type for this version of \textquotesingle{}get\textquotesingle{} method Type should be \textquotesingle{}(THIS\+\_\+\+TYPE)\+::common\textquotesingle{} struct \\
+\hline
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em size} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa455118d2c885fff850472c0e2a969bf}\label{classeffolkronium_1_1basic__random__static_aa455118d2c885fff850472c0e2a969bf}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [7/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename... $>$ class Container, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}}$>$\+::value \&\& \mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$Container$<$A$>$ $>$\+::value, Container$<$C$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{start,  }\item[{B}]{end,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return container filled with random common\+\_\+type values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The Key type for this version of \textquotesingle{}get\textquotesingle{} method Type should be \textquotesingle{}(THIS\+\_\+\+TYPE)\+::common\textquotesingle{} struct \\
+\hline
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em size} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Container \char`\"{}reserve\char`\"{} method will be called before generation 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a702f5d6d8cbbbfde1a6369f65d321150}\label{classeffolkronium_1_1basic__random__static_a702f5d6d8cbbbfde1a6369f65d321150}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [8/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$template$<$ typename... $>$ class Container, typename Key , typename A , typename B , typename C  = typename std\+::common\+\_\+type$<$\+A, B$>$\+::type$>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$Key, \mbox{\hyperlink{classeffolkronium_1_1basic__random__static_ac033cf44523d592ef7ab19e0edf67f14}{common}}$>$\+::value \&\& !\mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{details\+::has\+\_\+reserve}}$<$Container$<$C$>$ $>$\+::value, Container$<$C$>$ $>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{A}]{start,  }\item[{B}]{end,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return container filled with random common\+\_\+type values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & The Key type for this version of \textquotesingle{}get\textquotesingle{} method Type should be \textquotesingle{}(THIS\+\_\+\+TYPE)\+::common\textquotesingle{} struct \\
+\hline
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+{\em size} & The number of elements in resulting container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container filled with random values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa7aa5674e65242f717bb5678bb74be3d}\label{classeffolkronium_1_1basic__random__static_aa7aa5674e65242f717bb5678bb74be3d}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [9/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Dist , typename... Args$>$ \\
+static Dist\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return value from custom Dist distribution seeded by internal random engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dist} & The type of custom distribution with next concept\+: \href{http://en.cppreference.com/w/cpp/concept/RandomNumberDistribution}{\texttt{ http\+://en.\+cppreference.\+com/w/cpp/concept/\+Random\+Number\+Distribution}} \\
+\hline
+{\em args} & The arguments which will be forwarded to Dist constructor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value from custom distribution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aa9487045f99bd54b529079e90b9c61ad}\label{classeffolkronium_1_1basic__random__static_aa9487045f99bd54b529079e90b9c61ad}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [10/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$T, bool$>$\+::value, bool$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{const double}]{probability = {\ttfamily 0.5} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a bool value with specific probability by std\+::bernoulli\+\_\+distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em probability} & The probability of generating true in \mbox{[}0; 1\mbox{]} range 0 means always false, 1 means always true \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}true\textquotesingle{} with \textquotesingle{}probability\textquotesingle{} probability (\textquotesingle{}false\textquotesingle{} otherwise) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a272220135588843c1d0b88aca583ccae}\label{classeffolkronium_1_1basic__random__static_a272220135588843c1d0b88aca583ccae}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [11/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Container $>$ \\
+static auto \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{Container \&}]{container }\end{DoxyParamCaption}) -\/$>$ typename std\+::enable\+\_\+if$<$       \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__iterator}{details\+::is\+\_\+iterator}}$<$decltype(std\+::begin(container))$>$\+::value,       decltype(std\+::begin(container))$>$\+::type \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return random iterator from Container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & The container with elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random iterator from container 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If container is empty return std\+::end( container ) iterator 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a6e3cbdb7f39a22ac0da4db84c0bd797c}\label{classeffolkronium_1_1basic__random__static_a6e3cbdb7f39a22ac0da4db84c0bd797c}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [12/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Dist $>$ \\
+static Dist\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{Dist \&}]{dist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return value from custom \textquotesingle{}dist\textquotesingle{} distribution seeded by internal random engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & The custom distribution with next concept\+: \href{http://en.cppreference.com/w/cpp/concept/RandomNumberDistribution}{\texttt{ http\+://en.\+cppreference.\+com/w/cpp/concept/\+Random\+Number\+Distribution}} \\
+\hline
+{\em args} & The arguments which will be forwarded to Dist constructor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value from custom \textquotesingle{}dist\textquotesingle{} distribution 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ac43f425640c6c79f0990442a5373cf8a}\label{classeffolkronium_1_1basic__random__static_ac43f425640c6c79f0990442a5373cf8a}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [13/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Input\+It $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__iterator}{details\+::is\+\_\+iterator}}$<$Input\+It$>$\+::value, Input\+It$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{Input\+It}]{first,  }\item[{Input\+It}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return random iterator from iterator range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first,last} & -\/ the range of elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random iterator from \mbox{[}first, last) range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If first == last, return last 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a6810cb4d47112878804af9b70501a0fa}\label{classeffolkronium_1_1basic__random__static_a6810cb4d47112878804af9b70501a0fa}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [14/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static T \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{init\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return random value from initilizer\+\_\+list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+list} & initilizer\+\_\+list with values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random value from initilizer\+\_\+list 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Should be 1 or more elements in initilizer\+\_\+list 
+
+Warning! Elements in initilizer\+\_\+list can\textquotesingle{}t be moved\+: \href{https://stackoverflow.com/a/8193157/5734836}{\texttt{ https\+://stackoverflow.\+com/a/8193157/5734836}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_af6e5bc27705ce45b06aca2b403d9ec18}\label{classeffolkronium_1_1basic__random__static_af6e5bc27705ce45b06aca2b403d9ec18}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [15/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__int}{details\+::is\+\_\+uniform\+\_\+int}}$<$T$>$\+::value, T$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{T}]{from = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}()},  }\item[{T}]{to = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a random integer number in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+int\+\_\+distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random integer number in a \mbox{[}from; to\mbox{]} range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allow both\+: \textquotesingle{}from\textquotesingle{} $<$= \textquotesingle{}to\textquotesingle{} and \textquotesingle{}from\textquotesingle{} $>$= \textquotesingle{}to\textquotesingle{} 
+
+Prevent implicit type conversion 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a73fb98bbb19bc22b0f69212cb84c4c92}\label{classeffolkronium_1_1basic__random__static_a73fb98bbb19bc22b0f69212cb84c4c92}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [16/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__real}{details\+::is\+\_\+uniform\+\_\+real}}$<$T$>$\+::value, T$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{T}]{from = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}()},  }\item[{T}]{to = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a random real number in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+real\+\_\+distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random real number in a \mbox{[}from; to\mbox{]} range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allow both\+: \textquotesingle{}from\textquotesingle{} $<$= \textquotesingle{}to\textquotesingle{} and \textquotesingle{}from\textquotesingle{} $>$= \textquotesingle{}to\textquotesingle{} 
+
+Prevent implicit type conversion 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ab2907c4d4e4de3a1d22a3d9b1877b56e}\label{classeffolkronium_1_1basic__random__static_ab2907c4d4e4de3a1d22a3d9b1877b56e}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [17/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__byte}{details\+::is\+\_\+byte}}$<$T$>$\+::value, T$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{T}]{from = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}()},  }\item[{T}]{to = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a random byte number in a \mbox{[}from; to\mbox{]} range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random byte number in a \mbox{[}from; to\mbox{]} range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allow both\+: \textquotesingle{}from\textquotesingle{} $<$= \textquotesingle{}to\textquotesingle{} and \textquotesingle{}from\textquotesingle{} $>$= \textquotesingle{}to\textquotesingle{} 
+
+Prevent implicit type conversion 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ad01ca80363a71dc8c13e1551ef466f82}\label{classeffolkronium_1_1basic__random__static_ad01ca80363a71dc8c13e1551ef466f82}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [18/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$\mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__character}{details\+::is\+\_\+supported\+\_\+character}}$<$T$>$\+::value, T$>$\+::type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{T}]{from = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}{min}}()},  }\item[{T}]{to = {\ttfamily std\+:\+:numeric\+\_\+limits$<$T$>$\+:\+:\mbox{\hyperlink{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}{max}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generate a random character in a \mbox{[}from; to\mbox{]} range by std\+::uniform\+\_\+int\+\_\+distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The first limit number of a random range \\
+\hline
+{\em to} & The second limit number of a random range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random character in a \mbox{[}from; to\mbox{]} range 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allow both\+: \textquotesingle{}from\textquotesingle{} $<$= \textquotesingle{}to\textquotesingle{} and \textquotesingle{}from\textquotesingle{} $>$= \textquotesingle{}to\textquotesingle{} 
+
+Prevent implicit type conversion 
+\end{DoxyNote}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aab2cb3e7404dbd35dd9736d824c79e23}\label{classeffolkronium_1_1basic__random__static_aab2cb3e7404dbd35dd9736d824c79e23}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get@{get}}
+\index{get@{get}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [19/19]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename T , std\+::size\+\_\+t N$>$ \\
+static T$\ast$ \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get (\begin{DoxyParamCaption}\item[{T(\&)}]{array\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return random pointer from built-\/in array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The built-\/in array with elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to random element in array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_ac7628e8a598be72e148736c1d887e290}\label{classeffolkronium_1_1basic__random__static_ac7628e8a598be72e148736c1d887e290}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!get\_engine@{get\_engine}}
+\index{get\_engine@{get\_engine}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{get\_engine()}{get\_engine()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static Engine \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::get\+\_\+engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+return internal engine by copy 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a633f45cae3663ee2cc7980c7881fb253}\label{classeffolkronium_1_1basic__random__static_a633f45cae3663ee2cc7980c7881fb253}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static bool \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::is\+\_\+equal (\begin{DoxyParamCaption}\item[{const Engine \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compares internal pseudo-\/random number engine with \textquotesingle{}other\textquotesingle{} pseudo-\/random number engine. Two engines are equal, if their internal states are equivalent, that is, if they would generate equivalent values for any number of calls of operator() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The engine, with which the internal engine will be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if other and internal engine are equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}\label{classeffolkronium_1_1basic__random__static_aef4b26050e763110d9a872debd1a9b1d}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!max@{max}}
+\index{max@{max}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static constexpr Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\begin{DoxyReturn}{Returns}
+The maximum value potentially generated by the random-\/number engine 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}\label{classeffolkronium_1_1basic__random__static_a1d0d7db4e8b9af1a8c39210e14a3a7e9}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!min@{min}}
+\index{min@{min}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static constexpr Engine\+::result\+\_\+type \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\begin{DoxyReturn}{Returns}
+The minimum value potentially generated by the random-\/number engine 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a998aa3e3282eab1082ed2c22373efe37}\label{classeffolkronium_1_1basic__random__static_a998aa3e3282eab1082ed2c22373efe37}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!reseed@{reseed}}
+\index{reseed@{reseed}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{reseed()}{reseed()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::reseed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reseed by Seeder. 
+
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a40670aaaa27fff71fdc24dbc13a130d0}\label{classeffolkronium_1_1basic__random__static_a40670aaaa27fff71fdc24dbc13a130d0}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!seed@{seed}}
+\index{seed@{seed}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{seed()}{seed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::seed (\begin{DoxyParamCaption}\item[{const typename Engine\+::result\+\_\+type}]{value = {\ttfamily Engine\+:\+:default\+\_\+seed} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reinitializes the internal state of the random-\/number engine using new seed value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The seed value to use in the initialization of the internal state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a61bb0f1ff7cc99d84f206296ba7dac68}\label{classeffolkronium_1_1basic__random__static_a61bb0f1ff7cc99d84f206296ba7dac68}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!seed@{seed}}
+\index{seed@{seed}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{seed()}{seed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Sseq $>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::seed (\begin{DoxyParamCaption}\item[{Sseq \&}]{seq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reinitializes the internal state of the random-\/number engine using new seed value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The seed sequence to use in the initialization of the internal state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a92e7c1f016fffa55b9d6ac2cefe5c4b9}\label{classeffolkronium_1_1basic__random__static_a92e7c1f016fffa55b9d6ac2cefe5c4b9}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!serialize@{serialize}}
+\index{serialize@{serialize}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename CharT , typename Traits $>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::serialize (\begin{DoxyParamCaption}\item[{std\+::basic\+\_\+ostream$<$ CharT, Traits $>$ \&}]{ost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Serializes the internal state of the internal pseudo-\/random number engine as a sequence of decimal numbers separated by one or more spaces, and inserts it to the stream ost. The fill character and the formatting flags of the stream are ignored and unaffected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ost} & The output stream to insert the data to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a8f9a8f667b3296df4aedfbafc76d417c}\label{classeffolkronium_1_1basic__random__static_a8f9a8f667b3296df4aedfbafc76d417c}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Container $>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::shuffle (\begin{DoxyParamCaption}\item[{Container \&}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reorders the elements in the given container such that each possible permutation of those elements has equal probability of appearance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & -\/ the container with elements to shuffle randomly \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classeffolkronium_1_1basic__random__static_a9c18d14b91553d22e69e0ef02e5a18f0}\label{classeffolkronium_1_1basic__random__static_a9c18d14b91553d22e69e0ef02e5a18f0}} 
+\index{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$@{effolkronium::basic\_random\_static$<$ Engine, Seeder, IntegerDist, RealDist, BoolDist $>$}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Engine , typename Seeder  = seeder\+\_\+default, template$<$ typename $>$ class Integer\+Dist = std\+::uniform\+\_\+int\+\_\+distribution, template$<$ typename $>$ class Real\+Dist = std\+::uniform\+\_\+real\+\_\+distribution, typename Bool\+Dist  = std\+::bernoulli\+\_\+distribution$>$ \\
+template$<$typename Random\+It $>$ \\
+static void \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static}}$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$\+::shuffle (\begin{DoxyParamCaption}\item[{Random\+It}]{first,  }\item[{Random\+It}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reorders the elements in the given range \mbox{[}first, last) such that each possible permutation of those elements has equal probability of appearance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first,last} & -\/ the range of elements to shuffle randomly \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{random_8hpp}{random.\+hpp}}\end{DoxyCompactItemize}

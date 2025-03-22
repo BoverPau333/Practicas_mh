@@ -1,0 +1,76 @@
+\hypertarget{classBruteSearch}{}\doxysection{Brute\+Search Class Reference}
+\label{classBruteSearch}\index{BruteSearch@{BruteSearch}}
+
+
+{\ttfamily \#include $<$brutesearch.\+h$>$}
+
+
+
+Inheritance diagram for Brute\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classBruteSearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Brute\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classBruteSearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classBruteSearch_a7c1f5bb18270c3cadef6d2e3a3e808a1}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, const int maxevals) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBruteSearch_a7c1f5bb18270c3cadef6d2e3a3e808a1}\label{classBruteSearch_a7c1f5bb18270c3cadef6d2e3a3e808a1}} 
+\index{BruteSearch@{BruteSearch}!optimize@{optimize}}
+\index{optimize@{optimize}!BruteSearch@{BruteSearch}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResultMH}{Result\+MH}} Brute\+Search\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{const int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Run the metaheuristic algorithm to find the optimal solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the optimal solution and its fitness. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the algorithm fails to converge.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+author 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Implements \mbox{\hyperlink{classMH_a95f4b19531b853b0d064e6c901e54181}{MH}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{brutesearch_8h}{brutesearch.\+h}}\item 
+src/\mbox{\hyperlink{brutesearch_8cpp}{brutesearch.\+cpp}}\end{DoxyCompactItemize}

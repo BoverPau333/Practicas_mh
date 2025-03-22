@@ -1,0 +1,118 @@
+\hypertarget{classProblem}{}\doxysection{Problem Class Reference}
+\label{classProblem}\index{Problem@{Problem}}
+
+
+{\ttfamily \#include $<$problem.\+h$>$}
+
+
+
+Inheritance diagram for Problem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classProblem__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProblem_ad9d44f0ef936fb62f0ce41dd200494ac}{Problem}} ()
+\item 
+virtual \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} \mbox{\hyperlink{classProblem_a4bdd1eeeaefcb8dc27d5059877dd724e}{fitness}} (const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&solution)=0
+\item 
+virtual \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} \mbox{\hyperlink{classProblem_ab8b496564a2f85c550e6539a89b7b0cd}{fitness}} (const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&solution, unsigned pos\+\_\+previous, \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}} new\+\_\+value)
+\item 
+virtual \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \mbox{\hyperlink{classProblem_a0c0b81922ebee339b62f419a0b67d5c3}{create\+Solution}} ()=0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classProblem_a20182572d1593fc18e47a3af6a15f389}{get\+Solution\+Size}} ()=0
+\item 
+virtual std\+::pair$<$ \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}, \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}} $>$ \mbox{\hyperlink{classProblem_a429c8c57f88a02be8115b3961af491e1}{get\+Solution\+Domain\+Range}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classProblem}{Problem}} class to solve the given problem in metaheuristic.
+
+\begin{DoxyAuthor}{Author}
+Pau Bover Femenias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classProblem_ad9d44f0ef936fb62f0ce41dd200494ac}\label{classProblem_ad9d44f0ef936fb62f0ce41dd200494ac}} 
+\index{Problem@{Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{Problem()}{Problem()}}
+{\footnotesize\ttfamily Problem\+::\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classProblem_a0c0b81922ebee339b62f419a0b67d5c3}\label{classProblem_a0c0b81922ebee339b62f419a0b67d5c3}} 
+\index{Problem@{Problem}!createSolution@{createSolution}}
+\index{createSolution@{createSolution}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{createSolution()}{createSolution()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} Problem\+::create\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Create a new solution. 
+
+Implemented in \mbox{\hyperlink{classProblemIncrem_a1d3a50ecb47196ce2630b56cf6a9aaa8}{Problem\+Increm}}.
+
+\mbox{\Hypertarget{classProblem_a4bdd1eeeaefcb8dc27d5059877dd724e}\label{classProblem_a4bdd1eeeaefcb8dc27d5059877dd724e}} 
+\index{Problem@{Problem}!fitness@{fitness}}
+\index{fitness@{fitness}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{fitness()}{fitness()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} Problem\+::fitness (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&}]{solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classProblemIncrem_a43d131abfb394e6959422c857c843bfb}{Problem\+Increm}}.
+
+\mbox{\Hypertarget{classProblem_ab8b496564a2f85c550e6539a89b7b0cd}\label{classProblem_ab8b496564a2f85c550e6539a89b7b0cd}} 
+\index{Problem@{Problem}!fitness@{fitness}}
+\index{fitness@{fitness}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{fitness()}{fitness()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} Problem\+::fitness (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&}]{solution,  }\item[{unsigned}]{pos\+\_\+previous,  }\item[{\mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}}]{new\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Evaluate the solution indicating the current position to change and the new value.
+
+By default it run the previous one. However, it can be override to factorize the fitness.
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & to evaluate. \\
+\hline
+{\em pos\+\_\+previous} & position of the solution to change. \\
+\hline
+{\em new\+\_\+value.} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProblem_a429c8c57f88a02be8115b3961af491e1}\label{classProblem_a429c8c57f88a02be8115b3961af491e1}} 
+\index{Problem@{Problem}!getSolutionDomainRange@{getSolutionDomainRange}}
+\index{getSolutionDomainRange@{getSolutionDomainRange}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{getSolutionDomainRange()}{getSolutionDomainRange()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$\mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}, \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}$>$ Problem\+::get\+Solution\+Domain\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return the range of domain of each element of the solution 
+
+Implemented in \mbox{\hyperlink{classProblemIncrem_ae6a1718382d346dc631339eb62e45277}{Problem\+Increm}}.
+
+\mbox{\Hypertarget{classProblem_a20182572d1593fc18e47a3af6a15f389}\label{classProblem_a20182572d1593fc18e47a3af6a15f389}} 
+\index{Problem@{Problem}!getSolutionSize@{getSolutionSize}}
+\index{getSolutionSize@{getSolutionSize}!Problem@{Problem}}
+\doxysubsubsection{\texorpdfstring{getSolutionSize()}{getSolutionSize()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Problem\+::get\+Solution\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Return the current size of the solution. 
+
+Implemented in \mbox{\hyperlink{classProblemIncrem_a78069c51716b81f8c71434f6a185aa46}{Problem\+Increm}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{problem_8h}{problem.\+h}}\end{DoxyCompactItemize}

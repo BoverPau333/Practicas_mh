@@ -201,6 +201,30 @@ src/greedy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/greedy.cpp.s
 .PHONY : src/greedy.cpp.s
 
+src/localsearch.o: src/localsearch.cpp.o
+.PHONY : src/localsearch.o
+
+# target to build an object file
+src/localsearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch.cpp.o
+.PHONY : src/localsearch.cpp.o
+
+src/localsearch.i: src/localsearch.cpp.i
+.PHONY : src/localsearch.i
+
+# target to preprocess a source file
+src/localsearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch.cpp.i
+.PHONY : src/localsearch.cpp.i
+
+src/localsearch.s: src/localsearch.cpp.s
+.PHONY : src/localsearch.s
+
+# target to generate assembly for a file
+src/localsearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/localsearch.cpp.s
+.PHONY : src/localsearch.cpp.s
+
 src/pincrem.o: src/pincrem.cpp.o
 .PHONY : src/pincrem.o
 
@@ -224,6 +248,30 @@ src/pincrem.s: src/pincrem.cpp.s
 src/pincrem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pincrem.cpp.s
 .PHONY : src/pincrem.cpp.s
+
+src/psnimp.o: src/psnimp.cpp.o
+.PHONY : src/psnimp.o
+
+# target to build an object file
+src/psnimp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.o
+.PHONY : src/psnimp.cpp.o
+
+src/psnimp.i: src/psnimp.cpp.i
+.PHONY : src/psnimp.i
+
+# target to preprocess a source file
+src/psnimp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.i
+.PHONY : src/psnimp.cpp.i
+
+src/psnimp.s: src/psnimp.cpp.s
+.PHONY : src/psnimp.s
+
+# target to generate assembly for a file
+src/psnimp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.s
+.PHONY : src/psnimp.cpp.s
 
 src/randomsearch.o: src/randomsearch.cpp.o
 .PHONY : src/randomsearch.o
@@ -267,9 +315,15 @@ help:
 	@echo "... src/greedy.o"
 	@echo "... src/greedy.i"
 	@echo "... src/greedy.s"
+	@echo "... src/localsearch.o"
+	@echo "... src/localsearch.i"
+	@echo "... src/localsearch.s"
 	@echo "... src/pincrem.o"
 	@echo "... src/pincrem.i"
 	@echo "... src/pincrem.s"
+	@echo "... src/psnimp.o"
+	@echo "... src/psnimp.i"
+	@echo "... src/psnimp.s"
 	@echo "... src/randomsearch.o"
 	@echo "... src/randomsearch.i"
 	@echo "... src/randomsearch.s"

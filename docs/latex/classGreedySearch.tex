@@ -1,0 +1,94 @@
+\hypertarget{classGreedySearch}{}\doxysection{Greedy\+Search Class Reference}
+\label{classGreedySearch}\index{GreedySearch@{GreedySearch}}
+
+
+{\ttfamily \#include $<$greedy.\+h$>$}
+
+
+
+Inheritance diagram for Greedy\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGreedySearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Greedy\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGreedySearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGreedySearch_aa0372ed79128a1cafa37d5f3821f994f}{Greedy\+Search}} ()
+\item 
+virtual \mbox{\hyperlink{classGreedySearch_abd65056dce8177ea4d3bc8a420309c5d}{$\sim$\+Greedy\+Search}} ()
+\item 
+\mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classGreedySearch_a4fab24015aea3dd0d776abb2993d4c79}{optimize}} (\mbox{\hyperlink{classHeuristicProblem}{Heuristic\+Problem}} $\ast$problem, int maxevals) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the Random Search metaheuristic
+\begin{DoxyItemize}
+\item Randomly generates solutions and selects the best one
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMH}{MH}} 
+
+\mbox{\hyperlink{classProblem}{Problem}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGreedySearch_aa0372ed79128a1cafa37d5f3821f994f}\label{classGreedySearch_aa0372ed79128a1cafa37d5f3821f994f}} 
+\index{GreedySearch@{GreedySearch}!GreedySearch@{GreedySearch}}
+\index{GreedySearch@{GreedySearch}!GreedySearch@{GreedySearch}}
+\doxysubsubsection{\texorpdfstring{GreedySearch()}{GreedySearch()}}
+{\footnotesize\ttfamily Greedy\+Search\+::\+Greedy\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGreedySearch_abd65056dce8177ea4d3bc8a420309c5d}\label{classGreedySearch_abd65056dce8177ea4d3bc8a420309c5d}} 
+\index{GreedySearch@{GreedySearch}!````~GreedySearch@{$\sim$GreedySearch}}
+\index{````~GreedySearch@{$\sim$GreedySearch}!GreedySearch@{GreedySearch}}
+\doxysubsubsection{\texorpdfstring{$\sim$GreedySearch()}{~GreedySearch()}}
+{\footnotesize\ttfamily virtual Greedy\+Search\+::$\sim$\+Greedy\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGreedySearch_a4fab24015aea3dd0d776abb2993d4c79}\label{classGreedySearch_a4fab24015aea3dd0d776abb2993d4c79}} 
+\index{GreedySearch@{GreedySearch}!optimize@{optimize}}
+\index{optimize@{optimize}!GreedySearch@{GreedySearch}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResultMH}{Result\+MH}} Greedy\+Search\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeuristicProblem}{Heuristic\+Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create random solutions until maxevals has been achieved, and returns the best one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to be optimized \\
+\hline
+{\em maxevals} & Maximum number of evaluations allowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the best solution found and its fitness 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classHeuristicMH_a1567915805da88ee0bf5eecc0597241a}{Heuristic\+MH}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{greedy_8h}{greedy.\+h}}\item 
+src/\mbox{\hyperlink{greedy_8cpp}{greedy.\+cpp}}\end{DoxyCompactItemize}

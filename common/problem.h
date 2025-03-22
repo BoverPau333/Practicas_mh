@@ -12,7 +12,7 @@ using Random = effolkronium::random_static;
 /**
  * Problem class to solve the given problem in metaheuristic.
  *
- * @author your_name
+ * @author Pau Bover Femenias
  * @version 1.0
  */
 class Problem {

@@ -1,0 +1,109 @@
+\hypertarget{classProblemIncrem}{}\doxysection{Problem\+Increm Class Reference}
+\label{classProblemIncrem}\index{ProblemIncrem@{ProblemIncrem}}
+
+
+{\ttfamily \#include $<$pincrem.\+h$>$}
+
+
+
+Inheritance diagram for Problem\+Increm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classProblemIncrem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Problem\+Increm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classProblemIncrem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProblemIncrem_aac737776d4b470fa5ce5a3de40d8727b}{Problem\+Increm}} (size\+\_\+t size)
+\item 
+\mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} \mbox{\hyperlink{classProblemIncrem_a43d131abfb394e6959422c857c843bfb}{fitness}} (const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&solution) override
+\item 
+\mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \mbox{\hyperlink{classProblemIncrem_a1d3a50ecb47196ce2630b56cf6a9aaa8}{create\+Solution}} () override
+\item 
+size\+\_\+t \mbox{\hyperlink{classProblemIncrem_a78069c51716b81f8c71434f6a185aa46}{get\+Solution\+Size}} () override
+\item 
+std\+::pair$<$ \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}, \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}} $>$ \mbox{\hyperlink{classProblemIncrem_ae6a1718382d346dc631339eb62e45277}{get\+Solution\+Domain\+Range}} () override
+\item 
+vector$<$ \mbox{\hyperlink{solution_8h_a685a28f9b447d17c6bb9297afc44b191}{t\+Heuristic}} $>$ \mbox{\hyperlink{classProblemIncrem_a6d60e4aa7bb520408f27233d0186b403}{heuristic}} (\mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&sol, const vector$<$ \mbox{\hyperlink{solution_8h_a8656aad7580fdd02a03f5f0198baaeaa}{t\+Option}} $>$ \&options)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classProblemIncrem_aac737776d4b470fa5ce5a3de40d8727b}\label{classProblemIncrem_aac737776d4b470fa5ce5a3de40d8727b}} 
+\index{ProblemIncrem@{ProblemIncrem}!ProblemIncrem@{ProblemIncrem}}
+\index{ProblemIncrem@{ProblemIncrem}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{ProblemIncrem()}{ProblemIncrem()}}
+{\footnotesize\ttfamily Problem\+Increm\+::\+Problem\+Increm (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classProblemIncrem_a1d3a50ecb47196ce2630b56cf6a9aaa8}\label{classProblemIncrem_a1d3a50ecb47196ce2630b56cf6a9aaa8}} 
+\index{ProblemIncrem@{ProblemIncrem}!createSolution@{createSolution}}
+\index{createSolution@{createSolution}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{createSolution()}{createSolution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} Problem\+Increm\+::create\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create a new solution. 
+
+Implements \mbox{\hyperlink{classProblem_a0c0b81922ebee339b62f419a0b67d5c3}{Problem}}.
+
+\mbox{\Hypertarget{classProblemIncrem_a43d131abfb394e6959422c857c843bfb}\label{classProblemIncrem_a43d131abfb394e6959422c857c843bfb}} 
+\index{ProblemIncrem@{ProblemIncrem}!fitness@{fitness}}
+\index{fitness@{fitness}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{fitness()}{fitness()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} Problem\+Increm\+::fitness (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&}]{solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classProblem_a4bdd1eeeaefcb8dc27d5059877dd724e}{Problem}}.
+
+\mbox{\Hypertarget{classProblemIncrem_ae6a1718382d346dc631339eb62e45277}\label{classProblemIncrem_ae6a1718382d346dc631339eb62e45277}} 
+\index{ProblemIncrem@{ProblemIncrem}!getSolutionDomainRange@{getSolutionDomainRange}}
+\index{getSolutionDomainRange@{getSolutionDomainRange}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{getSolutionDomainRange()}{getSolutionDomainRange()}}
+{\footnotesize\ttfamily std\+::pair$<$\mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}, \mbox{\hyperlink{solution_8h_a84377a6ac2f8fb4dad34c6318dab5822}{t\+Domain}}$>$ Problem\+Increm\+::get\+Solution\+Domain\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the range of domain of each element of the solution 
+
+Implements \mbox{\hyperlink{classProblem_a429c8c57f88a02be8115b3961af491e1}{Problem}}.
+
+\mbox{\Hypertarget{classProblemIncrem_a78069c51716b81f8c71434f6a185aa46}\label{classProblemIncrem_a78069c51716b81f8c71434f6a185aa46}} 
+\index{ProblemIncrem@{ProblemIncrem}!getSolutionSize@{getSolutionSize}}
+\index{getSolutionSize@{getSolutionSize}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{getSolutionSize()}{getSolutionSize()}}
+{\footnotesize\ttfamily size\+\_\+t Problem\+Increm\+::get\+Solution\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the current size of the solution. 
+
+Implements \mbox{\hyperlink{classProblem_a20182572d1593fc18e47a3af6a15f389}{Problem}}.
+
+\mbox{\Hypertarget{classProblemIncrem_a6d60e4aa7bb520408f27233d0186b403}\label{classProblemIncrem_a6d60e4aa7bb520408f27233d0186b403}} 
+\index{ProblemIncrem@{ProblemIncrem}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!ProblemIncrem@{ProblemIncrem}}
+\doxysubsubsection{\texorpdfstring{heuristic()}{heuristic()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{solution_8h_a685a28f9b447d17c6bb9297afc44b191}{t\+Heuristic}} $>$ Problem\+Increm\+::heuristic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&}]{current\+\_\+sol,  }\item[{const vector$<$ \mbox{\hyperlink{solution_8h_a8656aad7580fdd02a03f5f0198baaeaa}{t\+Option}} $>$ \&}]{new\+\_\+option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is heuristic for the problem 
+
+Implements \mbox{\hyperlink{classHeuristicProblem_a546cc50b954a8455c356037135c811a4}{Heuristic\+Problem}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{pincrem_8h}{pincrem.\+h}}\item 
+src/\mbox{\hyperlink{pincrem_8cpp}{pincrem.\+cpp}}\end{DoxyCompactItemize}

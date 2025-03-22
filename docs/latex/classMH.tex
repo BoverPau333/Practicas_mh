@@ -1,0 +1,90 @@
+\hypertarget{classMH}{}\doxysection{MH Class Reference}
+\label{classMH}\index{MH@{MH}}
+
+
+{\ttfamily \#include $<$mh.\+h$>$}
+
+
+
+Inheritance diagram for MH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMH__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMH_a6a759aaa2a4ab34f57d7a3750f01dd02}{$\sim$\+MH}} ()
+\item 
+virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classMH_a95f4b19531b853b0d064e6c901e54181}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, int maxevals)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Metaheuristic algorithm interface.
+
+\begin{DoxyAuthor}{Author}
+author 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMH_a6a759aaa2a4ab34f57d7a3750f01dd02}\label{classMH_a6a759aaa2a4ab34f57d7a3750f01dd02}} 
+\index{MH@{MH}!````~MH@{$\sim$MH}}
+\index{````~MH@{$\sim$MH}!MH@{MH}}
+\doxysubsubsection{\texorpdfstring{$\sim$MH()}{~MH()}}
+{\footnotesize\ttfamily virtual MH\+::$\sim$\+MH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMH_a95f4b19531b853b0d064e6c901e54181}\label{classMH_a95f4b19531b853b0d064e6c901e54181}} 
+\index{MH@{MH}!optimize@{optimize}}
+\index{optimize@{optimize}!MH@{MH}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} MH\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the metaheuristic algorithm to find the optimal solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the optimal solution and its fitness. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the algorithm fails to converge.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+author 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Implemented in \mbox{\hyperlink{classRandomSearch_a2af779441b7f91240001a39cd1d3d551}{Random\+Search}}, \mbox{\hyperlink{classMHTrayectory_a3d333b13454240fc8cc43cd1a437ea85}{MHTrayectory}}, \mbox{\hyperlink{classHeuristicMH_abf483b8eec47bfcbc6a0f885381bb2f8}{Heuristic\+MH}}, and \mbox{\hyperlink{classBruteSearch_a7c1f5bb18270c3cadef6d2e3a3e808a1}{Brute\+Search}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{mh_8h}{mh.\+h}}\end{DoxyCompactItemize}

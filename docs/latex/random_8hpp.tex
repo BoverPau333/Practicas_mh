@@ -1,0 +1,74 @@
+\hypertarget{random_8hpp}{}\doxysection{common/random.hpp File Reference}
+\label{random_8hpp}\index{common/random.hpp@{common/random.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$initializer\+\_\+list$>$}\newline
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for random.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1common}{effolkronium\+::details\+::common}}
+\begin{DoxyCompactList}\small\item\em Key type for getting common type numbers or objects. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__int}{effolkronium\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is applicable by a std\+::uniform\+\_\+int\+\_\+distribution. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__real}{effolkronium\+::details\+::is\+\_\+uniform\+\_\+real$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is applicable by a std\+::uniform\+\_\+real\+\_\+distribution. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__byte}{effolkronium\+::details\+::is\+\_\+byte$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is plain byte. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__number}{effolkronium\+::details\+::is\+\_\+supported\+\_\+number$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is plain number type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__supported__character}{effolkronium\+::details\+::is\+\_\+supported\+\_\+character$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is character type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__iterator}{effolkronium\+::details\+::is\+\_\+iterator$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em True if type T is iterator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1details_1_1has__reserve}{effolkronium\+::details\+::has\+\_\+reserve$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classeffolkronium_1_1details_1_1has__insert}{effolkronium\+::details\+::has\+\_\+insert$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structeffolkronium_1_1seeder__default}{effolkronium\+::seeder\+\_\+default}}
+\begin{DoxyCompactList}\small\item\em Default seeder for \textquotesingle{}random\textquotesingle{} classes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__static}{effolkronium\+::basic\+\_\+random\+\_\+static$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with static API and static internal member storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__thread__local}{effolkronium\+::basic\+\_\+random\+\_\+thread\+\_\+local$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with thread\+\_\+local API and thread\+\_\+local internal member storage. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classeffolkronium_1_1basic__random__local}{effolkronium\+::basic\+\_\+random\+\_\+local$<$ Engine, Seeder, Integer\+Dist, Real\+Dist, Bool\+Dist $>$}}
+\begin{DoxyCompactList}\small\item\em Base template class for random with local API and local internal member storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceeffolkronium}{effolkronium}}
+\item 
+ \mbox{\hyperlink{namespaceeffolkronium_1_1details}{effolkronium\+::details}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a11cbd79a2c1538db38f15cd8565d8cca}{effolkronium\+::random\+\_\+static}} = basic\+\_\+random\+\_\+static$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a143677cd9b2127a0897d1f80ffbbc95f}{effolkronium\+::random\+\_\+thread\+\_\+local}} = basic\+\_\+random\+\_\+thread\+\_\+local$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceeffolkronium_a18c0a6191ad71f370cff7a40bd0ee305}{effolkronium\+::random\+\_\+local}} = basic\+\_\+random\+\_\+local$<$ std\+::mt19937 $>$
+\begin{DoxyCompactList}\small\item\em The basic static random alias based on a std\+::mt19937. \end{DoxyCompactList}\end{DoxyCompactItemize}

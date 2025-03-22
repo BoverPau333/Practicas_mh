@@ -1,0 +1,138 @@
+\hypertarget{classHeuristicMH}{}\doxysection{Heuristic\+MH Class Reference}
+\label{classHeuristicMH}\index{HeuristicMH@{HeuristicMH}}
+
+
+{\ttfamily \#include $<$heuristicmh.\+h$>$}
+
+
+
+Inheritance diagram for Heuristic\+MH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classHeuristicMH__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Heuristic\+MH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classHeuristicMH__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classHeuristicMH_a5b362b2a400cb80ad21cda50cd98d9c2}{$\sim$\+Heuristic\+MH}} ()
+\item 
+virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classHeuristicMH_a1567915805da88ee0bf5eecc0597241a}{optimize}} (\mbox{\hyperlink{classHeuristicProblem}{Heuristic\+Problem}} $\ast$problem, int maxevals)=0
+\item 
+\mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classHeuristicMH_abf483b8eec47bfcbc6a0f885381bb2f8}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, int maxevals) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Metaheuristic algorithm interface.
+
+\begin{DoxyAuthor}{Author}
+dmolina 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHeuristicMH_a5b362b2a400cb80ad21cda50cd98d9c2}\label{classHeuristicMH_a5b362b2a400cb80ad21cda50cd98d9c2}} 
+\index{HeuristicMH@{HeuristicMH}!````~HeuristicMH@{$\sim$HeuristicMH}}
+\index{````~HeuristicMH@{$\sim$HeuristicMH}!HeuristicMH@{HeuristicMH}}
+\doxysubsubsection{\texorpdfstring{$\sim$HeuristicMH()}{~HeuristicMH()}}
+{\footnotesize\ttfamily virtual Heuristic\+MH\+::$\sim$\+Heuristic\+MH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHeuristicMH_a1567915805da88ee0bf5eecc0597241a}\label{classHeuristicMH_a1567915805da88ee0bf5eecc0597241a}} 
+\index{HeuristicMH@{HeuristicMH}!optimize@{optimize}}
+\index{optimize@{optimize}!HeuristicMH@{HeuristicMH}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} Heuristic\+MH\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeuristicProblem}{Heuristic\+Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the metaheuristic algorithm to find the optimal solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the optimal solution and its fitness. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the algorithm fails to converge.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+author 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Implemented in \mbox{\hyperlink{classGreedySearch_a4fab24015aea3dd0d776abb2993d4c79}{Greedy\+Search}}.
+
+\mbox{\Hypertarget{classHeuristicMH_abf483b8eec47bfcbc6a0f885381bb2f8}\label{classHeuristicMH_abf483b8eec47bfcbc6a0f885381bb2f8}} 
+\index{HeuristicMH@{HeuristicMH}!optimize@{optimize}}
+\index{optimize@{optimize}!HeuristicMH@{HeuristicMH}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResultMH}{Result\+MH}} Heuristic\+MH\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Run the metaheuristic algorithm to find the optimal solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the optimal solution and its fitness. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the algorithm fails to converge.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySince}{Since}
+2021-\/05-\/01 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+author 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Implements \mbox{\hyperlink{classMH_a95f4b19531b853b0d064e6c901e54181}{MH}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{heuristicmh_8h}{heuristicmh.\+h}}\end{DoxyCompactItemize}

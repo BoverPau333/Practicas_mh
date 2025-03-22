@@ -1,0 +1,48 @@
+\hypertarget{structeffolkronium_1_1details_1_1is__uniform__int}{}\doxysection{effolkronium\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$ Struct Template Reference}
+\label{structeffolkronium_1_1details_1_1is__uniform__int}\index{effolkronium::details::is\_uniform\_int$<$ T $>$@{effolkronium::details::is\_uniform\_int$<$ T $>$}}
+
+
+True if type T is applicable by a std\+::uniform\+\_\+int\+\_\+distribution.  
+
+
+
+
+{\ttfamily \#include $<$random.\+hpp$>$}
+
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__int_a30a260480e81672f77bed4573e690c43}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct effolkronium\+::details\+::is\+\_\+uniform\+\_\+int$<$ T $>$}
+
+True if type T is applicable by a std\+::uniform\+\_\+int\+\_\+distribution. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structeffolkronium_1_1details_1_1is__uniform__int_a30a260480e81672f77bed4573e690c43}\label{structeffolkronium_1_1details_1_1is__uniform__int_a30a260480e81672f77bed4573e690c43}} 
+\index{effolkronium::details::is\_uniform\_int$<$ T $>$@{effolkronium::details::is\_uniform\_int$<$ T $>$}!value@{value}}
+\index{value@{value}!effolkronium::details::is\_uniform\_int$<$ T $>$@{effolkronium::details::is\_uniform\_int$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool \mbox{\hyperlink{structeffolkronium_1_1details_1_1is__uniform__int}{effolkronium\+::details\+::is\+\_\+uniform\+\_\+int}}$<$ T $>$\+::value\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{      std::is\_same<T, short>::value || std::is\_same<T, int>::value ||}
+\DoxyCodeLine{      std::is\_same<T, long>::value || std::is\_same<T, long long>::value ||}
+\DoxyCodeLine{      std::is\_same<T, unsigned short>::value ||}
+\DoxyCodeLine{      std::is\_same<T, unsigned int>::value ||}
+\DoxyCodeLine{      std::is\_same<T, unsigned long>::value ||}
+\DoxyCodeLine{      std::is\_same<T, unsigned long long>::value}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{random_8hpp}{random.\+hpp}}\end{DoxyCompactItemize}

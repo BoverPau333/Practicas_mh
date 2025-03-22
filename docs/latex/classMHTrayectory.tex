@@ -1,0 +1,96 @@
+\hypertarget{classMHTrayectory}{}\doxysection{MHTrayectory Class Reference}
+\label{classMHTrayectory}\index{MHTrayectory@{MHTrayectory}}
+
+
+{\ttfamily \#include $<$mhtrayectory.\+h$>$}
+
+
+
+Inheritance diagram for MHTrayectory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classMHTrayectory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for MHTrayectory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classMHTrayectory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMHTrayectory_a0370785272f262d34f1800276c764989}{$\sim$\+MHTrayectory}} ()
+\item 
+\mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classMHTrayectory_a3d333b13454240fc8cc43cd1a437ea85}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, int maxevals) override
+\item 
+virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classMHTrayectory_a2067fd3671a25dd02784847cc5550731}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&current, \mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}} fitness, int maxevals)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trayectory-\/based metaheuristic algorithm interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMHTrayectory_a0370785272f262d34f1800276c764989}\label{classMHTrayectory_a0370785272f262d34f1800276c764989}} 
+\index{MHTrayectory@{MHTrayectory}!````~MHTrayectory@{$\sim$MHTrayectory}}
+\index{````~MHTrayectory@{$\sim$MHTrayectory}!MHTrayectory@{MHTrayectory}}
+\doxysubsubsection{\texorpdfstring{$\sim$MHTrayectory()}{~MHTrayectory()}}
+{\footnotesize\ttfamily virtual MHTrayectory\+::$\sim$\+MHTrayectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMHTrayectory_a2067fd3671a25dd02784847cc5550731}\label{classMHTrayectory_a2067fd3671a25dd02784847cc5550731}} 
+\index{MHTrayectory@{MHTrayectory}!optimize@{optimize}}
+\index{optimize@{optimize}!MHTrayectory@{MHTrayectory}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structResultMH}{Result\+MH}} MHTrayectory\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{const \mbox{\hyperlink{solution_8h_aa173a6816e94605956cbb9bdd27166c8}{t\+Solution}} \&}]{current,  }\item[{\mbox{\hyperlink{solution_8h_acc4a1472d9c5c0cc7b54e8a2b6409368}{t\+Fitness}}}]{fitness,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the Trayectory-\/based metaheuristic algorithm to find the optimal solution starting from a given solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em current} & The initial solution. \\
+\hline
+{\em fitness} & The fitness of the initial solution. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMHTrayectory_a3d333b13454240fc8cc43cd1a437ea85}\label{classMHTrayectory_a3d333b13454240fc8cc43cd1a437ea85}} 
+\index{MHTrayectory@{MHTrayectory}!optimize@{optimize}}
+\index{optimize@{optimize}!MHTrayectory@{MHTrayectory}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResultMH}{Result\+MH}} MHTrayectory\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Run the Trayectory-\/based metaheuristic algorithm to find the optimal solution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to solve. \\
+\hline
+{\em maxevals} & The maximum number of evaluations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMHTrayectory_a3d333b13454240fc8cc43cd1a437ea85}{MHTrayectory\+::optimize()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classMH_a95f4b19531b853b0d064e6c901e54181}{MH}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+common/\mbox{\hyperlink{mhtrayectory_8h}{mhtrayectory.\+h}}\end{DoxyCompactItemize}

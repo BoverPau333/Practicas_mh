@@ -1,0 +1,94 @@
+\hypertarget{classRandomSearch}{}\doxysection{Random\+Search Class Reference}
+\label{classRandomSearch}\index{RandomSearch@{RandomSearch}}
+
+
+{\ttfamily \#include $<$randomsearch.\+h$>$}
+
+
+
+Inheritance diagram for Random\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classRandomSearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Random\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classRandomSearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRandomSearch_aa7a226f8b6b2e8f30d9ffccadf362c46}{Random\+Search}} ()
+\item 
+virtual \mbox{\hyperlink{classRandomSearch_ad86b81b3e32713bf1055bee2d4d18e62}{$\sim$\+Random\+Search}} ()
+\item 
+\mbox{\hyperlink{structResultMH}{Result\+MH}} \mbox{\hyperlink{classRandomSearch_a2af779441b7f91240001a39cd1d3d551}{optimize}} (\mbox{\hyperlink{classProblem}{Problem}} $\ast$problem, int maxevals) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the Random Search metaheuristic
+\begin{DoxyItemize}
+\item Randomly generates solutions and selects the best one
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classMH}{MH}} 
+
+\mbox{\hyperlink{classProblem}{Problem}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRandomSearch_aa7a226f8b6b2e8f30d9ffccadf362c46}\label{classRandomSearch_aa7a226f8b6b2e8f30d9ffccadf362c46}} 
+\index{RandomSearch@{RandomSearch}!RandomSearch@{RandomSearch}}
+\index{RandomSearch@{RandomSearch}!RandomSearch@{RandomSearch}}
+\doxysubsubsection{\texorpdfstring{RandomSearch()}{RandomSearch()}}
+{\footnotesize\ttfamily Random\+Search\+::\+Random\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classRandomSearch_ad86b81b3e32713bf1055bee2d4d18e62}\label{classRandomSearch_ad86b81b3e32713bf1055bee2d4d18e62}} 
+\index{RandomSearch@{RandomSearch}!````~RandomSearch@{$\sim$RandomSearch}}
+\index{````~RandomSearch@{$\sim$RandomSearch}!RandomSearch@{RandomSearch}}
+\doxysubsubsection{\texorpdfstring{$\sim$RandomSearch()}{~RandomSearch()}}
+{\footnotesize\ttfamily virtual Random\+Search\+::$\sim$\+Random\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRandomSearch_a2af779441b7f91240001a39cd1d3d551}\label{classRandomSearch_a2af779441b7f91240001a39cd1d3d551}} 
+\index{RandomSearch@{RandomSearch}!optimize@{optimize}}
+\index{optimize@{optimize}!RandomSearch@{RandomSearch}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structResultMH}{Result\+MH}} Random\+Search\+::optimize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProblem}{Problem}} $\ast$}]{problem,  }\item[{int}]{maxevals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create random solutions until maxevals has been achieved, and returns the best one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The problem to be optimized \\
+\hline
+{\em maxevals} & Maximum number of evaluations allowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the best solution found and its fitness 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classMH_a95f4b19531b853b0d064e6c901e54181}{MH}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{randomsearch_8h}{randomsearch.\+h}}\item 
+src/\mbox{\hyperlink{randomsearch_8cpp}{randomsearch.\+cpp}}\end{DoxyCompactItemize}

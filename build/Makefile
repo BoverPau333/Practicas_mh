@@ -225,6 +225,30 @@ src/pincrem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pincrem.cpp.s
 .PHONY : src/pincrem.cpp.s
 
+src/psnimp.o: src/psnimp.cpp.o
+.PHONY : src/psnimp.o
+
+# target to build an object file
+src/psnimp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.o
+.PHONY : src/psnimp.cpp.o
+
+src/psnimp.i: src/psnimp.cpp.i
+.PHONY : src/psnimp.i
+
+# target to preprocess a source file
+src/psnimp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.i
+.PHONY : src/psnimp.cpp.i
+
+src/psnimp.s: src/psnimp.cpp.s
+.PHONY : src/psnimp.s
+
+# target to generate assembly for a file
+src/psnimp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/psnimp.cpp.s
+.PHONY : src/psnimp.cpp.s
+
 src/randomsearch.o: src/randomsearch.cpp.o
 .PHONY : src/randomsearch.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/pincrem.o"
 	@echo "... src/pincrem.i"
 	@echo "... src/pincrem.s"
+	@echo "... src/psnimp.o"
+	@echo "... src/psnimp.i"
+	@echo "... src/psnimp.s"
 	@echo "... src/randomsearch.o"
 	@echo "... src/randomsearch.i"
 	@echo "... src/randomsearch.s"

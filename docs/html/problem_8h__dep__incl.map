@@ -1,0 +1,16 @@
+<map id="common/problem.h" name="common/problem.h">
+<area shape="rect" id="node1" title=" " alt="" coords="293,5,443,32"/>
+<area shape="rect" id="node2" href="$heuristicproblem_8h.html" title=" " alt="" coords="125,80,331,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="332,304,415,331"/>
+<area shape="rect" id="node9" href="$mh_8h.html" title=" " alt="" coords="417,80,533,107"/>
+<area shape="rect" id="node3" href="$heuristicmh_8h.html" title=" " alt="" coords="158,155,330,181"/>
+<area shape="rect" id="node7" href="$pincrem_8h.html" title=" " alt="" coords="23,155,134,181"/>
+<area shape="rect" id="node4" href="$greedy_8h.html" title=" " alt="" coords="206,229,306,256"/>
+<area shape="rect" id="node6" href="$greedy_8cpp.html" title=" " alt="" coords="193,304,308,331"/>
+<area shape="rect" id="node8" href="$pincrem_8cpp.html" title=" " alt="" coords="5,229,131,256"/>
+<area shape="rect" id="node10" href="$mhtrayectory_8h.html" title=" " alt="" coords="743,155,924,181"/>
+<area shape="rect" id="node11" href="$brutesearch_8h.html" title=" " alt="" coords="407,155,542,181"/>
+<area shape="rect" id="node13" href="$randomsearch_8h.html" title=" " alt="" coords="567,155,718,181"/>
+<area shape="rect" id="node12" href="$brutesearch_8cpp.html" title=" " alt="" coords="456,229,605,256"/>
+<area shape="rect" id="node14" href="$randomsearch_8cpp.html" title=" " alt="" coords="680,229,845,256"/>
+</map>

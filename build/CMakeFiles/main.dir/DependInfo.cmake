@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/brutesearch.cpp" "CMakeFiles/main.dir/src/brutesearch.cpp.o" "gcc" "CMakeFiles/main.dir/src/brutesearch.cpp.o.d"
   "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/greedy.cpp" "CMakeFiles/main.dir/src/greedy.cpp.o" "gcc" "CMakeFiles/main.dir/src/greedy.cpp.o.d"
   "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/pincrem.cpp" "CMakeFiles/main.dir/src/pincrem.cpp.o" "gcc" "CMakeFiles/main.dir/src/pincrem.cpp.o.d"
+  "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/psnimp.cpp" "CMakeFiles/main.dir/src/psnimp.cpp.o" "gcc" "CMakeFiles/main.dir/src/psnimp.cpp.o.d"
   "/home/paubover/Escritorio/2dCuatri/Practicas_mh/src/randomsearch.cpp" "CMakeFiles/main.dir/src/randomsearch.cpp.o" "gcc" "CMakeFiles/main.dir/src/randomsearch.cpp.o.d"
   )
 

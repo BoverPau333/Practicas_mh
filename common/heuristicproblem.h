@@ -9,7 +9,7 @@ using std::vector;
 /**
  * Problem class to solve the given problem in metaheuristic.
  *
- * @author your_name
+ * @author Pau Bover
  * @version 1.0
  */
 class HeuristicProblem : public Problem {
